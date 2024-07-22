@@ -1,5 +1,9 @@
 const body = document.body;
 
+const title = document.createElement("p");
+title.innerText = "Etch-a-Sketch";
+title.classList.add("title");
+
 const buttonInput = document.createElement("button");
 buttonInput.classList.add("buttonStyle");
 buttonInput.innerText = "Change Grid number";
@@ -9,22 +13,39 @@ container.classList.add("containerFlex");
 
 const reset = document.createElement("button");
 reset.innerText = "reset the grids";
-buttonInput.classList.add("buttonStyle");
+reset.classList.add("buttonStyle");
 
+body.appendChild(title);
 body.appendChild(buttonInput);
 body.appendChild(container);
 body.appendChild(reset);
 
 function createGrid(gridNumber) {
   container.innerHTML = "";
-  for (let i = 1; i <= gridNumber * gridNumber; i++) {
-    const grid = document.createElement("div");
-    grid.innerText = "Square";
-    grid.classList.add("gridStyle");
-    grid.addEventListener("mouseover", function () {
-      grid.style.backgroundColor = "black";
-    });
-    container.appendChild(grid);
+  let gridSize = 800 / gridNumber;
+
+  if (gridNumber === 1) {
+    for (let i = 1; i <= gridNumber + gridNumber; i++) {
+      gridSize = 800 / 2;
+      const grid = document.createElement("div");
+      grid.classList.add("gridStyle");
+      grid.style.width = `${gridSize}px`;
+      grid.addEventListener("mouseover", function () {
+        grid.style.backgroundColor = "black";
+      });
+      container.appendChild(grid);
+    }
+  } else {
+    for (let i = 1; i <= gridNumber * gridNumber; i++) {
+      const grid = document.createElement("div");
+      grid.classList.add("gridStyle");
+      grid.style.width = `${gridSize}px`;
+      grid.style.height = `${gridSize}px`;
+      grid.addEventListener("mouseover", function () {
+        grid.style.backgroundColor = "black";
+      });
+      container.appendChild(grid);
+    }
   }
 }
 

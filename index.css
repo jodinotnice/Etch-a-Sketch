@@ -5,6 +5,11 @@ body {
   flex-direction: column;
 }
 
+.title {
+  font-size: 50px;
+  font-family: Montserrat;
+  margin: 0;
+}
 .containerFlex {
   display: flex;
   flex-wrap: wrap;
@@ -16,11 +21,17 @@ body {
 }
 
 .gridStyle {
-  flex-basis: 6.25%;
-  flex-shrink: 0;
-  flex-grow: 0;
   background-color: lightblue;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid;
+}
+
+.buttonStyle {
+  margin: 20px;
+  padding: 10px 20px;
+  width: 200px;
+  border: none;
 }
