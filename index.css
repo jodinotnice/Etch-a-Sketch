@@ -19,8 +19,6 @@ body {
   flex-basis: 6.25%;
   flex-shrink: 0;
   flex-grow: 1;
-  min-width: 0;
-  border: none;
   background-color: lightblue;
   display: flex;
   align-items: center;
