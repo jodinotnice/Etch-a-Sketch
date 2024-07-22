@@ -13,8 +13,8 @@ body {
 .containerFlex {
   display: flex;
   flex-wrap: wrap;
-  height: 800px;
-  width: 800px;
+  height: 600px;
+  width: 600px;
   border-style: solid;
   border-width: 1px;
   border-radius: 2px;

@@ -22,11 +22,11 @@ body.appendChild(reset);
 
 function createGrid(gridNumber) {
   container.innerHTML = "";
-  let gridSize = 800 / gridNumber;
+  let gridSize = 600 / gridNumber;
 
   if (gridNumber === 1) {
     for (let i = 1; i <= gridNumber + gridNumber; i++) {
-      gridSize = 800 / 2;
+      gridSize = 600 / 2;
       const grid = document.createElement("div");
       grid.classList.add("gridStyle");
       grid.style.width = `${gridSize}px`;
